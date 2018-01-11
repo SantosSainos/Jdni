@@ -10,8 +10,36 @@
 </head>
 <body>
 	<h1>Actualizacion.jsp</h1>
-	Atributos del modelo: <c:out value="${mensaje}"></c:out><br>
-	Atributos en session: <c:out value="${sessionScope.resultado}"></c:out><br>
+	<sf:form action="${pageContext.request.contextPath}/actualizacion/save"
+		method="post" modelAttribute="actualizacion">
+		<table>
+			<tr>
+				<td>Id empleado</td>
+				<td><sf:input path="id_emp"/></td>
+			</tr>
+			<tr>
+				<td>Curp</td>
+				<td><sf:input path="curp_spd" type="text" /></td>
+			</tr>
+
+			<tr>
+				<td>Nombre</td>
+				<td><sf:input path="nombre_spd" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Observaciones</td>
+				<td><sf:input path="observaciones" type="text" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Guardar cambios" />
+			</tr>
+		</table>
+	</sf:form>
+
+	<br />
+	<c:out value="${resultado}"></c:out>
 	
 	
 </body>

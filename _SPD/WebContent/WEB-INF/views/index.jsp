@@ -13,7 +13,6 @@
 	<a href='<c:url value="/about"/>'>A cerca de</a><br>
 	<a href='<c:url value="/actualizacion"/>'>Actualizacion</a>
 	<br>
-	Atributos del modelo: <c:out value="${mensaje}"></c:out><br>
-	Atributos en session: <c:out value="${sessionScope.resultado}"></c:out><br>
+	<c:out value="${actuForm}"></c:out><br>
 </body>
 </html>
